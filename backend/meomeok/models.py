@@ -16,18 +16,18 @@ class Restarunt(models.Model) :
     number = models.CharField(max_length = 14)
     
 class Review (models.Model) :
-    user_id = models.ForeignKey(Users, on_delete=models.CASCADE)
-    rest_id = models.ForeignKey(Restarunt, on_delete=models.CASCADE)
+    user = models.ForeignKey(Users, on_delete=models.CASCADE)
+    rest = models.ForeignKey(Restarunt, on_delete=models.CASCADE)
     rest_star = models.FloatField(default = 0.0)
     post_date = models.DateTimeField('date published')
     post_body = models.TextField()
 
 class menu_price (models.Model) :
-    rest_id = models.ForeignKey(Restarunt, on_delete = models.CASCADE)
+    rest = models.ForeignKey(Restarunt, on_delete = models.CASCADE)
     menu_name = models.CharField(max_length=20)
     menu_price = models.IntegerField()
 
 class rest_location (models.Model) :
-    rest_id = models.ForeignKey(Restarunt, on_delete = models.CASCADE)
+    rest = models.ForeignKey(Restarunt, on_delete = models.CASCADE)
     x_axis = models.DecimalField(max_digits=9, decimal_places=6)
     y_axis = models.DecimalField(max_digits=9, decimal_places=6)
