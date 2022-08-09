@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# Mat-jip Database Model
 
 class Users(models.Model) :
     user_id = models.IntegerField(default = 1)
@@ -8,12 +8,13 @@ class Users(models.Model) :
     authority = models.IntegerField(default = 0)
 
 class Restaurant(models.Model) :
-    rest_id = models.IntegerField(default = 1)
-    rest_name = models.CharField(max_length = 30)
-    rest_number = models.CharField(max_length = 30)
+    restaurant_id = models.IntegerField(default = 1)
+    restaurant_name = models.CharField(max_length = 30)
     address = models.CharField(max_length = 100)
     category = models.IntegerField(default = 0)
     number = models.CharField(max_length = 14)
+    latitude = models.DecimalField(max_digits=9, decimal_places=6)
+    longitude = models.DecimalField(max_digits=9, decimal_places=6)
     
 class Review (models.Model) :
     user = models.ForeignKey(Users, on_delete=models.CASCADE)
@@ -26,8 +27,3 @@ class menu_price (models.Model) :
     restaurant = models.ForeignKey(Restaurant, on_delete = models.CASCADE)
     menu_name = models.CharField(max_length=20)
     menu_price = models.IntegerField()
-
-class location (models.Model) :
-    restaurant = models.ForeignKey(Restaurant, on_delete = models.CASCADE)
-    x_axis = models.DecimalField(max_digits=9, decimal_places=6)
-    y_axis = models.DecimalField(max_digits=9, decimal_places=6)
