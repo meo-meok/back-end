@@ -13,8 +13,8 @@ class Restaurant(models.Model) :
     address = models.CharField(max_length = 100)
     category = models.IntegerField(default = 0)
     number = models.CharField(max_length = 14)
-    latitude = models.DecimalField(max_digits=9, decimal_places=6)
-    longitude = models.DecimalField(max_digits=9, decimal_places=6)
+    latitude = models.DecimalField(max_digits=9, decimal_places=6, null = True)
+    longitude = models.DecimalField(max_digits=9, decimal_places=6, null = True)
     
 class Review (models.Model) :
     user = models.ForeignKey(Users, on_delete=models.CASCADE)
