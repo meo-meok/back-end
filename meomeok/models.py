@@ -16,6 +16,9 @@ class Restaurant(models.Model) :
     latitude = models.DecimalField(max_digits=9, decimal_places=6, default = 0.0)
     longitude = models.DecimalField(max_digits=9, decimal_places=6, default = 0.0)
     
+    def __str__(self):
+        return self.restaurant_name
+    
 class Review (models.Model) :
     user = models.ForeignKey(Users, on_delete=models.CASCADE)
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
