@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Mat-jip Database Model
 
@@ -15,6 +16,13 @@ class Restaurant(models.Model) :
     number = models.CharField(max_length = 14)
     latitude = models.DecimalField(max_digits=9, decimal_places=6, default = 0.0)
     longitude = models.DecimalField(max_digits=9, decimal_places=6, default = 0.0)
+    
+    def __str__(self):
+        return self.restaurant_name
+
+    def get_absolute_url(self):
+        """Returns the url to access a detail record for this book."""
+        return reverse('restaurant-detail', args=[str(self.restaurant_id)])    
     
 class Review (models.Model) :
     user = models.ForeignKey(Users, on_delete=models.CASCADE)
