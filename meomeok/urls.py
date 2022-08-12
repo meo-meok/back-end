@@ -1,7 +1,7 @@
 from django.urls import path
-
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.ListRestaurant.as_view()),
+    path('<int:pk>/', views.DetailRestaurant.as_view()),
 ]
