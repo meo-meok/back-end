@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'meomeok.apps.MeomeokConfig',
 
     'django_extensions',
+    'rest_framework', # serialization을 위함
     'corsheaders',
     
 ]
