@@ -11,16 +11,25 @@ from .serializers import RestaurantSerializer
 
 class ListRestaurant(generics.ListCreateAPIView):
     queryset = Restaurant.objects.all()
-    serializer_class = RestaurantSerializer
+    serializer = RestaurantSerializer
 
 class DetailRestaurant(generics.RetrieveUpdateDestroyAPIView):
     queryset = Restaurant.objects.all()
-    serializer_class = RestaurantSerializer
+    serializer = RestaurantSerializer
 
+
+@csrf_exempt
 def RestaurantAPI(request, id = 0) :
     if request.method == 'GET' :
         objset = Restaurant.objects.all()
         objset_serializer = RestaurantSerializer(objset)
         return JsonResponse(objset_serializer, safe = False)
+    elif request.method == 'POST' :
+        data = JSONParser().parse(request)
+        serializer = RestaurantSerializer(data = data)
+        if serializer.is_valid() :
+            serializer.save()
+            return JsonResponse(serializer.data, status=201)
+        return JsonResponse(serializer.errors, status=400)
     
     
