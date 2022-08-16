@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from meomeok.views import RestaurantListAPI
 
 urlpatterns = [
     path('', include('meomeok.urls')),
     path('admin/', admin.site.urls),
     path('meomeok/', include('meomeok.urls')),
+    path('api/restaurant/', RestaurantListAPI.as_view())
 ]

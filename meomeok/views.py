@@ -6,6 +6,8 @@ from django.views import generic
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import generics
 from rest_framework.parsers import JSONParser
+from rest_framework.views import APIView
+from rest_framework.response import Response
 # from django.contrib.auth.models import User
 
 #random test
@@ -14,6 +16,13 @@ import random
 # 레스토랑 모델 불러오기
 from .models import Restaurant
 from .serializers import RestaurantSerializer
+
+class RestaurantListAPI(APIView) :
+    def get(self, request) :
+        queryset = Restaurant.objects.all()
+        serializer = RestaurantSerializer(queryset, many = True)
+
+        return Response(serializer.data)
 
 def index(request):
     # return HttpResponse("Hello, world. You're at the polls index.")
