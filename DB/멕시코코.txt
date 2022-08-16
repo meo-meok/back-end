@@ -1,0 +1,21 @@
+Category : 양식
+Address : 경북 포항시 북구 법원로8번길 13-13
+Number : 0507-1383-9632
+
+Menus
+--------------------
+치미창가(Chimichanga) : 10,900원
+까르니따스 타코 2pcs : 7,900원
+초리조 타코(chorizo taco) 2pcs : 7,900원
+소고기 베이컨 타코(beef&bacon taco) 2pcs : 7,900원
+불고기 타코(bulgogi taco) 2pcs : 7,900원
+통새우 타코(shrimp taco) 2pcs : 7,900원
+퀘사디아(Quesadilla) : 9,900원
+나초(Nacho) : 6,500원
+과카몰리(guacamole) : 3,900원
+하리토스(Jarritos) : 4,000원
+펩시콜라(PEPSI) : 2,500원
+코로나(Corona) 355ml : 5,000원
+테라(Terra) 330ml : 4,000원
+아메리카노 : 2,500원
+카페 데 오야(Café de olla) : 4,000원

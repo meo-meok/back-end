@@ -1,0 +1,112 @@
+Category : 카페/디저트
+Address : 경북 포항시 북구 법원로 170
+Number : 054-255-4005
+
+Menus
+--------------------
+아메리카노(Regular/hot) : 2,500원
+아메리카노(Regular/ice) : 2,500원
+아메리카노(Plus size/ice) : 3,900원
+카페라떼(Regular ice) : 3,800원
+카페라떼(Regular hot) : 3,800원
+카페라떼(Plus only iced) : 6,100원
+플랫화이트(only iced)(small(10oz/ice)) : 3,500원
+텐라떼(only iced)(small(10oz/ice)) : 3,900원
+바닐라빈라떼(Regular ice) : 4,300원
+바닐라빈라떼(Plus only iced) : 6,900원
+바닐라빈라떼(Regular hot) : 4,300원
+카페모카(Regular ice) : 4,800원
+카페모카(Plus only iced) : 7,800원
+카페모카(Regular hot) : 4,800원
+말차 카페라떼(Regular hot) : 4,800원
+말차 카페라떼(Regular ice) : 4,800원
+말차 카페라떼(Plus only iced) : 7,800원
+돌체라떼(Regular hot) : 4,500원
+돌체라떼(Regular ice) : 4,500원
+돌체라떼(Plus only iced) : 7,300원
+밀크 카라멜 라떼(Regular hot) : 4,500원
+밀크 카라멜 라떼(Plus only iced) : 7,300원
+밀크 카라멜 라떼(Regular ice) : 4,500원
+달고나카페라떼(Only iced)(Regular ice) : 4,800원
+달고나카페라떼(Only iced)(Plus only iced) : 7,800원
+콜드브루(Regular hot) : 4,000원
+콜드브루(Regular ice) : 4,000원
+콜드브루(Plus only iced) : 6,400원
+아인슈페너(Regular hot) : 4,300원
+아인슈페너(Regular ice) : 4,300원
+아인슈페너(Plus only iced) : 6,900원
+콜드브루 라떼(Regular hot) : 4,500원
+콜드브루 라떼(Regular ice) : 4,500원
+콜드브루 라떼(Plus only iced) : 7,300원
+돌체 콜드브루라떼(Regular hot) : 4,800원
+돌체 콜드브루라떼(Regular ice) : 4,800원
+돌체 콜드브루라떼(Plus only iced) : 7,800원
+피치 아이스티(Regular ice) : 3,500원
+피치 아이스티(Plus only iced) : 5,600원
+율무라떼(Regular ice) : 3,500원
+율무라떼(Regular hot) : 3,500원
+유자레몬 아이스티(Regular ice) : 4,000원
+스트로베리라떼(Regular ice) : 4,000원
+스트로베리라떼(Plus only iced) : 6,400원
+달고나라떼(Regular ice) : 4,000원
+당고 미숫페너(Regular ice) : 4,500원
+당고 미숫페너(Regular hot) : 4,500원
+리얼초코(Regular ice) : 4,500원
+리얼초코(Plus only iced) : 7,300원
+리얼초코(Regular hot) : 4,500원
+하동말차라떼(Regular hot) : 4,500원
+하동말차라떼(Regular ice) : 4,500원
+하동말차라떼(Plus only iced) : 7,300원
+로얄 밀크티(Regular hot) : 4,500원
+로얄 밀크티(Regular ice) : 4,500원
+로얄 밀크티(Plus only iced) : 7,300원
+레몬에이드(Regular ice) : 4,800원
+레몬에이드(Plus only iced) : 7,800원
+자몽에이드(Regular ice) : 4,800원
+자몽에이드(Plus only iced) : 7,800원
+오렌지 에이드(Regular ice) : 4,800원
+오렌지 에이드(Plus only iced) : 7,800원
+깔라만시에이드(Regular ice) : 4,500원
+크림치즈 홍차라떼(Regular ice) : 4,500원
+크림치즈 홍차라떼(Plus only iced) : 7,300원
+크림치즈 말차라떼(Regular ice) : 4,500원
+크림치즈 말차라떼(Plus only iced) : 7,300원
+크림치즈 딸기라떼(Regular ice) : 4,500원
+크림치즈 딸기라떼(Plus only iced) : 7,300원
+쟈스민 샤인레몬티(Regular ice) : 4,500원
+쟈스민 샤인레몬티(Plus only iced) : 7,800원
+유자애플티(Plus only iced) : 7,800원
+유자애플티(Regular ice) : 4,500원
+제주레몬레드티(Regular ice) : 4,500원
+제주레몬레드티(Plus only iced) : 7,800원
+얼그레이(Regular hot) : 3,500원
+얼그레이(Plus only iced) : 5,600원
+얼그레이(Regular ice) : 3,500원
+텐저린진저(Regular hot) : 3,500원
+텐저린진저(Regular ice) : 3,500원
+텐저린진저(Plus only iced) : 5,600원
+캐모마일 메들리(Regular hot) : 3,500원
+캐모마일 메들리(Regular ice) : 3,500원
+캐모마일 메들리(Plus only iced) : 5,600원
+블루베리 히비스커스(Regular hot) : 3,500원
+블루베리 히비스커스(Regular ice) : 3,500원
+블루베리 히비스커스(Plus only iced) : 5,600원
+유자차(Regular hot) : 3,500원
+허니레몬티(Regular hot) : 4,000원
+허니자몽티(Regular hot) : 4,000원
+깔라만시 핫 티(Regular hot) : 4,000원
+블랙 자몽티(Regular hot) : 4,000원
+블랙 자몽티(Regular ice) : 4,000원
+블랙 자몽티(Plus only iced) : 6,400원
+코코넛 쿠키 : 1,200원
+수제 마카롱 [맛선택가능](1개) : 2,000원
+크림치즈 프레즐 : 2,500원
+미니쿠키[맛선택가능] : 3,000원
+도지마롤 : 4,500원
+르뱅쿠키[맛선택가능] : 3,500원
+우유생크림롤케이크(롤1조각) : 4,300원
+원두홀빈(180g)(다크) : 13,000원
+원두홀빈(180g)(미디움) : 13,000원
+드립백(7EA)(다크) : 10,000원
+드립백(7EA)(미디움) : 10,000원
+드립백(7EA)(디카페인) : 10,000원
