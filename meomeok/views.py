@@ -1,11 +1,12 @@
 import json
 
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse, Http404
 from django.views import generic
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework import generics, status
 from rest_framework.decorators import api_view
+from rest_framework.views import APIView
 from rest_framework.response import Response 
 from rest_framework.parsers import JSONParser
 # from django.contrib.auth.models import User
@@ -113,5 +114,43 @@ def restaurant_detail(request, pk):
         return Response(serializer.erros, status=status.HTTP_400_BAD_REQUEST)
 
     elif request.method == 'DELETE':
+        restaurant.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+class RestaurantList(APIView):
+    def get(self, request, format=None):
+        restaurants = Restaurant.objects.all()
+        serializer = RestaurantSerializer(restaurants, many=True)
+        return Response(serializer.data)
+
+    def post(self, request, format=None):
+        serializer = RestaurantSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class RestaurantDetail(APIView):
+    def get_object(self, pk):
+        try:
+            return Restaurant.objects.get(pk=pk)
+        except Restaurant.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk, format=None):
+        restaurant = self.get_object(pk)
+        serializer = RestaurantSerializer(restaurant)
+        return Response(serializer.data)
+
+    def put(self, requset, pk, format=None):
+        restaurant = self.get_object(pk)
+        serializer = RestaurantSerializer(restaurant, data=requset.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.erros, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk, format=None):
+        restaurant = self.get_object(pk)
         restaurant.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
