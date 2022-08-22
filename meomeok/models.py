@@ -14,8 +14,8 @@ class Restaurant(models.Model) :
     address = models.CharField(max_length = 100)
     category = models.IntegerField(default = 0)
     number = models.CharField(max_length = 14)
-    latitude = models.DecimalField(max_digits=9, decimal_places=6, default = 0.0)
-    longitude = models.DecimalField(max_digits=9, decimal_places=6, default = 0.0)
+    latitude = models.DecimalField(max_digits=17, decimal_places=15, default = 0.0)
+    longitude = models.DecimalField(max_digits=18, decimal_places=15, default = 0.0)
     
     def __str__(self):
         return self.restaurant_name
