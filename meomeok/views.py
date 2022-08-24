@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, JsonResponse
 from django.views import generic
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework import generics
+from rest_framework import generics, status
 from rest_framework.parsers import JSONParser
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -86,17 +86,78 @@ def restaurant_detail(request, pk):
         restaurant.delete()
         return HttpResponse(status=204)
 
-@csrf_exempt
-def review_list(request):
-    if request.method == 'GET':
+class ReviewList(APIView):
+    def get(self, request, format=None):
         reviews = Review.objects.all()
         serializer = ReviewSerializer(reviews, many=True)
-        return JsonResponse(serializer.data, safe=False)
+        return Response(serializer.data)
 
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = ReviewSerializer(data=data)
+    def post(self, request, format=None):
+        serializer = ReviewSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+            return Response(serializer.data, status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class ReviewDetail(APIView):
+    def get_object(self, pk):
+        try:
+            return Review.objects.get(pk=pk)
+        except Review.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk, format=None):
+        review = self.get_object(pk)
+        serializer = ReviewSerializer(review)
+        return Response(serializer.data)
+
+    def put(self, request, pk, format=None):
+        review = self.get_object(pk)
+        serializer = ReviewSerializer(review, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.erros, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self, request, pk, format=None):
+        review = self.get_object(pk)
+        review.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+# @csrf_exempt
+# def review_list(request):
+#     if request.method == 'GET':
+#         reviews = Review.objects.all()
+#         serializer = ReviewSerializer(reviews, many=True)
+#         return JsonResponse(serializer.data, safe=False)
+
+#     elif request.method == 'POST':
+#         data = JSONParser().parse(request)
+#         serializer = ReviewSerializer(data=data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return JsonResponse(serializer.data, status=201)
+#         return JsonResponse(serializer.errors, status=400)
+
+# @csrf_exempt
+# def review_detail(request, pk):
+#     try:
+#         review = Review.objects.get(pk=pk)
+#     except Review.DoesNotExist:
+#         return HttpResponse(status=404)
+    
+#     if request.method == 'GET':
+#         serializer = ReviewSerializer(restaurant)
+#         return JsonResponse(serializer.data)
+
+#     elif request.method == 'PUT':
+#         data = JSONParser().parse(request)
+#         serializer = ReviewSerializer(review, data=data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return JsonResponse(serializer.data)
+#         return JsonResponse(serializer.errors, status=400)
+
+#     elif request.method == 'DELETE':
+#         review.delete()
+#         return HttpResponse(status=204)
