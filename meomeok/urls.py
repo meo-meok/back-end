@@ -8,4 +8,5 @@ urlpatterns = [
     # path('restaurants/<int:pk>', views.RestaurantDetailView.as_view(), name='restaurant-detail'),
     path('restaurants/', views.restaurant_list),
     path('restaurants/<int:pk>', views.restaurant_detail),
+    path('reviews/', views.review_list),
 ]
