@@ -14,8 +14,8 @@ from rest_framework.response import Response
 import random
 
 # 레스토랑 모델 불러오기
-from .models import Restaurant
-from .serializers import RestaurantSerializer
+from .models import Restaurant, Review
+from .serializers import RestaurantSerializer, ReviewSerializer
 
 class RestaurantListAPI(APIView) :
     def get(self, request) :
@@ -85,3 +85,18 @@ def restaurant_detail(request, pk):
     elif request.method == 'DELETE':
         restaurant.delete()
         return HttpResponse(status=204)
+
+@csrf_exempt
+def review_list(request):
+    if request.method == 'GET':
+        reviews = Review.objects.all()
+        serializer = ReviewSerializer(reviews, many=True)
+        return JsonResponse(serializer.data, safe=False)
+
+    elif request.method == 'POST':
+        data = JSONParser().parse(request)
+        serializer = ReviewSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse(serializer.data, status=201)
+        return JsonResponse(serializer.errors, status=400)
